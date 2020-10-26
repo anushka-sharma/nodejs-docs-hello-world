@@ -6,7 +6,7 @@ orbs:
   welcome: circleci/welcome-orb@0.4.1
   slack: circleci/slack@4.0
 jobs:
-  run_tests:
+  run_pipeline:
     docker:
       - image: circleci/node:12
     steps:
@@ -29,4 +29,4 @@ workflows:
   welcome:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/run
+      - run_pipeline
