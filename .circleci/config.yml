@@ -12,9 +12,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Checking Versions/Config
+          name: Checking Versions 
           command: node -v
-          command: ansible --version
+            ansible --version
       - run:
           name: Build
           command: |
