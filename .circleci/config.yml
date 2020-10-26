@@ -14,9 +14,7 @@ jobs:
       - run:
           name: Checking Versions/Config
           command: |
-#            composer --version
             node -v
-            npm -v
             ansible --version
       - run:
           name: Build
