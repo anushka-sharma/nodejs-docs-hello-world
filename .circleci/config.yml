@@ -13,9 +13,7 @@ jobs:
       - checkout
       - run:
           name: Checking Versions/Config
-          command: |
-            node -v
-            ansible --version
+          command: node -v
       - run:
           name: Build
           command: |
