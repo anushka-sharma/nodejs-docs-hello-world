@@ -4,6 +4,25 @@ version: 2.1
 orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
+  slack: circleci/slack@4.0
+jobs:
+  run_tests:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - run:
+          name: Checking Versions/Config
+          command: |
+            composer --version
+            node -v
+            npm -v
+            ansible --version
+      - run:
+          name: Build
+          command: |
+            echo Installing project dependancies
+            composer install
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
