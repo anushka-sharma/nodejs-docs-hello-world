@@ -17,9 +17,9 @@ jobs:
             ansible --version
       - run:
           name: Build
-          command: |
+          command: composer install
             echo Installing project dependancies
-            composer install
+            
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
